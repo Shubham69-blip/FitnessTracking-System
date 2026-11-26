@@ -1,0 +1,271 @@
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #0b0f19;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  margin-left: 250px;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 30px 36px 45px;
+}
+
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 28px 18px 20px;
+  background: #111827;
+  border-right: 1px solid #202b3c;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 8px 35px;
+}
+
+.logo-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  color: #0b0f19;
+  background: #a3e635;
+  border-radius: 13px;
+}
+
+.sidebar-logo h2 {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -.7px;
+}
+
+.sidebar-logo span {
+  display: block;
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.sidebar-label {
+  padding: 0 12px 13px;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.sidebar-nav {
+  display: grid;
+  gap: 7px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 14px;
+  color: #94a3b8;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: .2s ease;
+}
+
+.nav-item:hover {
+  color: #fff;
+  background: #1e293b;
+}
+
+.nav-item.active {
+  color: #a3e635;
+  background: #a3e63515;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 16px 8px;
+  border-top: 1px solid #263244;
+}
+
+.user-avatar {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  color: #0b0f19;
+  background: #a3e635;
+  border-radius: 50%;
+  font-weight: 800;
+}
+
+.sidebar-user h4 {
+  font-size: 12px;
+}
+
+.sidebar-user span {
+  display: block;
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 10px;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  padding: 12px;
+  color: #94a3b8;
+  background: transparent;
+  border: 0;
+  font-size: 12px;
+}
+
+.logout-button:hover {
+  color: #fb7185;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+  padding: 0 36px;
+  background: #0b0f19ee;
+  border-bottom: 1px solid #202b3c;
+  backdrop-filter: blur(15px);
+}
+
+.navbar-search, .search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #64748b;
+  background: #151e2d;
+  border: 1px solid #263244;
+  border-radius: 10px;
+}
+
+.navbar-search {
+  width: 280px;
+  padding: 11px 13px;
+}
+
+.navbar-search input, .search-box input {
+  width: 100%;
+  color: #f8fafc;
+  background: transparent;
+  border: 0;
+  outline: none;
+  font-size: 12px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.notification-button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 39px;
+  height: 39px;
+  color: #94a3b8;
+  background: #151e2d;
+  border: 1px solid #263244;
+  border-radius: 11px;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 7px;
+  height: 7px;
+  background: #a3e635;
+  border: 1px solid #151e2d;
+  border-radius: 50%;
+}
+
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #94a3b8;
+}
+
+.navbar-user-info strong, .navbar-user-info span {
+  display: block;
+}
+
+.navbar-user-info strong {
+  color: #f8fafc;
+  font-size: 12px;
+}
+
+.navbar-user-info span {
+  margin-top: 3px;
+  color: #64748b;
+  font-size: 10px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .navbar {
+    height: 65px;
+    padding: 0 16px;
+  }
+
+  .page-container {
+    padding: 22px 16px;
+  }
+
+  .navbar-search {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-user-info, .navbar-profile > svg {
+    display: none;
+  }
+
+  .navbar-right {
+    gap: 10px;
+  }
+}
